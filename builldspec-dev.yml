@@ -32,7 +32,8 @@ phases:
       - terraform init 
       - terraform validate
       - terraform plan      
-      - terraform $TF_COMMAND -auto-approve  
+      #- terraform $TF_COMMAND -auto-approve
+      - terraform destroy -auto-approve
   post_build:
     on-failure: CONTINUE   
     commands:
